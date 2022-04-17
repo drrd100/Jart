@@ -1,4 +1,5 @@
 import React from "react";
+import { HelmetProvider } from "react-helmet-async";
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import ScrollToTop from "./components/common/ScrollToTop";
 import CartPage from "./pages/CartPage";
@@ -7,6 +8,7 @@ import ItemListPage from "./pages/ItemListPage";
 import LoginPage from "./pages/LoginPage";
 import MainPage from "./pages/MainPage";
 import RegisterPage from "./pages/RegisterPage";
+import SEO from "./SEO";
 
 
 function App() {
@@ -14,15 +16,18 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <ScrollToTop/>
-        <Routes>
-          <Route element={<MainPage />} path="/"/>
-          <Route element={<ItemListPage/>} path="/Itemlist/:category"/>
-          <Route element={<ItemDetailPage />} path="/ItemDetail/:id"/>
-          <Route element={<LoginPage />} path="/Login"/>
-          <Route element={<RegisterPage />} path="/Register"/>
-          <Route element={<CartPage />} path="/Cart"/>
-        </Routes>
+         <HelmetProvider>
+          <SEO/>
+          <ScrollToTop/>
+          <Routes>
+            <Route element={<MainPage />} path="/"/>
+            <Route element={<ItemListPage/>} path="/Itemlist/:category"/>
+            <Route element={<ItemDetailPage />} path="/ItemDetail/:id"/>
+            <Route element={<LoginPage />} path="/Login"/>
+            <Route element={<RegisterPage />} path="/Register"/>
+            <Route element={<CartPage />} path="/Cart"/>
+          </Routes>
+        </HelmetProvider>
       </BrowserRouter>
     </>
   );

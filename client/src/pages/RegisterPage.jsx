@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import register from '../../src/assets/css/user/register.module.css';
 import { TextField } from '@material-ui/core';
+import SEO from '../SEO';
 
 
 export default function Register() {
@@ -55,6 +56,13 @@ export default function Register() {
 
   return (
     <>
+    <SEO
+      title="Dr.Jart" 
+      description="회원가입 설명"
+      keywords="회원가입 키워드"
+      imgsrc="./assets/images/og-img.png"
+      url="http://3.35.230.1:3000"
+    />
       <div className={register.register_wrap}>
         <div className={register.register_contents}>
           <div className={register.register_contents_inner}>

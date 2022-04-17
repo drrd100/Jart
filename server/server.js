@@ -7,27 +7,14 @@ const cors = require('cors');
 // express 객체 생성
 const app = express();
 const api = require('./api/api');
+const review = require('./api/review');
 const users = require('./controller/users');
 
 app.use('/api', api);
+app.use('/review', review);
 app.use('/users',users);
 app.use(bodyParser.json());
 app.use(cors());
-
-app.use(express.static(path.join(__dirname, "build")));
-
-app.get("/*", (req, res) => {
-  res.set({
-    "Cache-Control": "no-cache, no-store, must-revalidate",
-    Pragma: "no-cache",
-    Date: Date.now()
-  });
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
-
-http.createServer(app).listen(port, () => {
-  console.log(`app listening at ${port}`);
-});
 
 // 기본 포트를 app 객체에 설정
 const port = process.env.PORT || 5000;

@@ -9,10 +9,20 @@ import MainVisual from '../components/main/MainVisual'
 import ReviewSlide from '../components/main/ReviewSlide'
 
 import '../assets/css/common/reset.css';
+import SEO from '../SEO'
 
 export default function MainPage(props) {
+    
+
     return (
         <>
+        <SEO
+            title="Dr.Jart" 
+            description="메인 설명"
+            keywords="메인 키워드"
+            imgsrc="./assets/images/og-img.png"
+            url="http://3.35.230.1:3000"
+        />
             <Header />
                 <MainVisual />
                 <MainBest />

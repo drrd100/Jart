@@ -1,10 +1,8 @@
 @font-face {
-  font-family: 'GmarketSans';
-  font-weight: 700; 
-  font-style: normal; 
-  src: url(https://cdn.jsdelivr.net/gh/webfontworld/GmarketSans/GmarketSansTTFBold.woff2) format('woff2'),
-       url(https://cdn.jsdelivr.net/gh/webfontworld/GmarketSans/GmarketSansTTFBold.woff) format('woff');
-  font-display: swap;
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 .inner{
   width: 1280px;
@@ -422,7 +420,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  max-width: 70%;
+  max-width: 60%;
 }
 .review_item .text .info .star {
   display: flex;

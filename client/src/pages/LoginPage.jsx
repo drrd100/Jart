@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import login from '../../src/assets/css/user/login.module.css';
+import SEO from '../SEO';
 
 export default function LoginPage(props) {
   const [id,setId] = useState("");
@@ -49,7 +50,15 @@ export default function LoginPage(props) {
   }
 
   return (
+    
     <>
+    <SEO
+      title="Dr.Jart" 
+      description="로그인 설명"
+      keywords="로그인 키워드"
+      imgsrc="./assets/images/og-img.png"
+      url="http://3.35.230.1:3000"
+    />
       <div className={login.login_wrap}>
         <div className={login.login_contents}>
           <div className={login.login_contents_inner}>

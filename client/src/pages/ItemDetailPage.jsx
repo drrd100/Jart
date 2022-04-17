@@ -5,6 +5,7 @@ import detail from '../assets/css/sub/product.module.css';
 import Footer from '../components/common/Footer';
 import Header from '../components/common/Header';
 import DetailTab from '../components/sub/DetailTab';
+import SEO from '../SEO';
 
 
 
@@ -39,6 +40,13 @@ export default function ItemDetailPage() {
 
   return (
     <>
+    <SEO
+      title="Dr.Jart" 
+      description="아이템디테일 설명"
+      keywords="아이템디테일 키워드"
+      imgsrc="./assets/images/og-img.png"
+      url="http://3.35.230.1:3000"
+    />
     <Header />
       <div className={detail.detail_wrap}>
         <div className={detail.inner}>
