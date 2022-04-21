@@ -13,17 +13,17 @@ router.get('/', (req, res) => {
           desc: "첫구매인데 사은품도 잘 받았구요 피부정돈에 도움되면 좋겠어요",
           star: 5,
           pr_name:"포맨 스킨 에센스",
-          thumb: "/assets/images/detail_thumb14.png",
+          thumb: "/assets/images/review1.jpg",
         },
         {
           id: 1,
           user: 'qweasd123',
           date: "2021-11-10",
-          title: "진정한 토너",
+          title: "진정한 크림",
           desc: " 더 대용량으로 나와도 좋을것같아요^^",
           star: 5,
           pr_name:"세라마이딘 아이크림",
-          thumb: "/assets/images/detail_thumb2.png",
+          thumb: "/assets/images/review2.jpg",
         },
         {
           id: 2,
@@ -33,7 +33,7 @@ router.get('/', (req, res) => {
           desc: "효과가 진짜 좋았어요!! 잔 트러블이 많았는데 싹 없어졌습니다!",
           star: 5,
           pr_name:"바이옴 브이세븐 세럼",
-          thumb: "/assets/images/detail_thumb13.png",
+          thumb: "/assets/images/review3.jpg",
         },
         {
           id: 3,
@@ -43,7 +43,7 @@ router.get('/', (req, res) => {
           desc: " 공식몰에서 구입하니 적립금과 쿠폰도 주고 너무 좋네용",
           star: 5,
           pr_name:"크라이오 러버 위드 수딩 알란토인",
-          thumb: "/assets/images/detail_thumb10.png",
+          thumb: "/assets/images/review4.jpg",
         },
         {
           id: 4,
@@ -53,7 +53,7 @@ router.get('/', (req, res) => {
           desc: " 어쩌다 사용해보았는데 괜찮아서 크림은 남아서 토너만 재구매해보았습니다! 금방 흡수되고 트러블도 많이 호전된상태라 아주 만족합니다. 마스크탓에 턱에 트러블이 나고 사라지지않던아이들이 많이 들어간게 보여서 행복합니다ㅜㅜㅜ",
           star: 5,
           pr_name:"크라이오 러버 위드 모이스처라이징 히알루론산",
-          thumb: "/assets/images/detail_thumb9.png",
+          thumb: "/assets/images/review5.jpg",
         },
         {
           id: 5,
@@ -63,7 +63,7 @@ router.get('/', (req, res) => {
           desc: " 토너는 당장 사용하려기 보다는 한여름에 피부진정시킬용으로 미리 사두었어요 잘 써볼게요~",
           star: 5,
           pr_name:"브이세븐 토닝 라이트",
-          thumb: "/assets/images/detail_thumb8.png",
+          thumb: "/assets/images/review6.jpg",
         },
         {
           id: 6,
@@ -73,7 +73,7 @@ router.get('/', (req, res) => {
           desc: " 배때마침 원플러스원도 하구ㅎ 너무 잘 산거 같애여ㅎ 어제 저녁에 세안 후 바로 사용해봤는데 촉촉하구 제 피부에 맞는거 같애요^^",
           star: 5,
           pr_name:"포어레미디™ 파하 익스폴리에이팅 세럼",
-          thumb: "/assets/images/detail_thumb7.png",
+          thumb: "/assets/images/review8.jpg",
         },
         {
           id: 7,
@@ -83,7 +83,7 @@ router.get('/', (req, res) => {
           desc: " 지복합 트러블 피부인데 산뜻하고 촉촉하게 정리됩니다. 1 + 1 로 구입했네요.",
           star: 5,
           pr_name:"더마스크 포어레미디",
-          thumb: "/assets/images/detail_thumb6.png",
+          thumb: "/assets/images/review7.jpg",
         },
         {
           id: 8,
@@ -93,7 +93,7 @@ router.get('/', (req, res) => {
           desc: " 토너는 당장 사용하려기 보다는 한여름에 피부진정시킬용으로 미리 사두었어요 잘 써볼게요~",
           star: 5,
           pr_name:"브이세븐 크림",
-          thumb: "/assets/images/detail_thumb8.png",
+          thumb: "/assets/images/review11.jpg",
         },
         {
           id: 9,
@@ -103,7 +103,7 @@ router.get('/', (req, res) => {
           desc: " 원래 작은 사이즈 써봤는데 너무 좋아서 큰거 구입합니다 손 건조한편인데 촉촉하고 흡수도 좋아서 잘쓰고있습니당",
           star: 5,
           pr_name:"포어레이디 엠플",
-          thumb: "/assets/images/detail_thumb7.png",
+          thumb: "/assets/images/review9.jpg",
         },
         {
           id: 10,
@@ -113,7 +113,7 @@ router.get('/', (req, res) => {
           desc: " 몇개째사용하고있어요바른즉시흡수되어찍찍하지않아좋습니다",
           star: 5,
           pr_name:"시카케어 앰플",
-          thumb: "/assets/images/detail_thumb4.png",
+          thumb: "/assets/images/review10.jpg",
         },
         
       ]
