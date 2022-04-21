@@ -3,6 +3,7 @@ import sub from '../../assets/css/sub/sub.module.css'
 import { useParams } from 'react-router-dom';
 import AllItem from '../Hook/AllItem';
 import CategoryItem from '../Hook/CategoryItem';
+import LocationItemList from './LocationItemList';
 
 
 export default function SubItemList() {
@@ -15,6 +16,7 @@ export default function SubItemList() {
                 <div className={sub.title}>
                     <p>{category}</p>
                 </div>
+                <LocationItemList/>
                 <div className={sub.list}>
                 {category === "all"
                 ?<AllItem />

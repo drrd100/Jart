@@ -33,7 +33,7 @@ export default function HeaderTop() {
           <ul className={header.right}>
             <li><Link to="/Login">로그인</Link></li>
             <li><Link to="/Register">회원가입</Link></li>
-            <li><Link to="/Cart">장바구니</Link></li>
+            <li><Link to="/">장바구니</Link></li>
             <li><Link to="/">마이페이지</Link></li>
           </ul>
         }

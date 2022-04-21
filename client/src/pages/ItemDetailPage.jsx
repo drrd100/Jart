@@ -11,7 +11,7 @@ import SEO from '../SEO';
 
 export default function ItemDetailPage() {
   const [number, setNumber] = useState(1);
-  const [totalPrice, setTotalPrice] =useState();
+  const [totalPrice, setTotalPrice] = useState();
   const [item, setItem] = useState([]);
   const {id} = useParams();
   
@@ -25,7 +25,7 @@ export default function ItemDetailPage() {
     });
     };
     callApi();
-  }, []);
+  },[]);
 
   const increase = () => {
     setNumber(number + 1);

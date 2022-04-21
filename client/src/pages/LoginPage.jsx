@@ -1,3 +1,4 @@
+import { TextField } from '@material-ui/core';
 import axios from 'axios';
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
@@ -64,12 +65,12 @@ export default function LoginPage(props) {
           <div className={login.login_contents_inner}>
           <div className={login.login_title}>
               <p>3배 더 강력해진 <span>3중 코어 보습</span>으로<br />
-                 극강의 보습력을 경험하세요.
+                극강의 보습력을 경험하세요.
               </p>
           </div>
             <form className={login.login_form} onSubmit={handleSubmit}>
-            <input onChange={handleId} type="text" placeholder='아이디' className={login.login_form_id}/>
-            <input onChange={handlePsword} type="password" placeholder='비밀번호' className={login.login_form_password} />
+              <TextField id="standard-basic" label="아이디" variant="standard" onChange={handleId} className={login.login_input}/>
+              <TextField id="standard-basic" label="비밀번호" variant="standard" onChange={handlePsword} className={login.login_input} />
             <div className={login.btn_find}>
               <Link to="/Register">회원가입</Link>
               <Link to="/Register">아이디찾기</Link>

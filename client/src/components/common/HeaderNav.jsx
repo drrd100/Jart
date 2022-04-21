@@ -40,10 +40,7 @@ export default function HeaderNav() {
               <Link className={header.nav_link} to="/">REVIEW</Link>
               <div className={header.nav_list_wrap}>
               <div className={header.nav_list} >
-                <Link to="/">전체보기4</Link>
-                <Link to="/">전체보기4</Link>
-                <Link to="/">전체보기4</Link>
-                <Link to="/">전체보기4</Link>
+                <Link to="/">포토리뷰</Link>
               </div>
           </div>
           </li>

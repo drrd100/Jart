@@ -1,7 +1,6 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Pagination } from "swiper";
-
+import { EffectFade,Autoplay } from "swiper";
 import 'swiper/css';
 import main from '../../assets/css/main/main.module.css'
 
@@ -13,11 +12,12 @@ export default function MainVisual() {
       spaceBetween={0}
       slidesPerView={1}
       loop={true}
-      //   pagination={{
-
-      //     type: "fraction",
-      // }}
-      // modules={[Pagination]}
+      effect={"fade"}
+      fadeEffect= {{crossFade:true,speed:500}}
+      autoplay={{
+        delay: 5000,
+      }}
+      modules={[EffectFade,Autoplay]}
     >
         <SwiperSlide className={[main.slide_item,main.slide_item01].join(' ')}>
           <div className={main.inner}>
@@ -29,6 +29,7 @@ export default function MainVisual() {
               <span># 모공케어</span>
             </div>
           </div>
+          <div className={[main.bg,main.slide_item01].join(' ')}></div>
       </SwiperSlide>
         <SwiperSlide className={[main.slide_item,main.slide_item02].join(' ')}>
           <div className={main.inner}>
@@ -40,6 +41,7 @@ export default function MainVisual() {
               <span># 비타톤업크림</span>
             </div>
           </div>
+          <div className={[main.bg,main.slide_item02].join(' ')}></div>
       </SwiperSlide>
       </Swiper>
     </>

@@ -8,7 +8,7 @@ export default function AllItem() {
   const { category } = useParams();
   useEffect(() => {
     const callApi = async () => {
-    await axios.get("/api")
+    await axios.get("/api/api")
       .then((res) => {
         setItem(res.data.product)
     });

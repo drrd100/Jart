@@ -7,7 +7,7 @@ export default function AllItem() {
   const [item, setItem] = useState([]);
   useEffect(() => {
     const callApi = async () => {
-    await axios.get("/api")
+    await axios.get("/api/api")
       .then((res) => {
         setItem(res.data.product)
     });

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import aside from '../../assets/css/common/aside.module.css'
 
@@ -40,9 +40,21 @@ const handleAide = (e) =>{
 const handleClose = (e) =>{
   const asideWrap = document.getElementsByClassName(aside.aside_wrap).item(0);
   const deemed = document.getElementsByClassName(aside.deemed).item(0);
+  const listItem = document.getElementsByClassName(aside.list_item)
+  const listTitle = document.getElementsByClassName(aside.list_title)
+
   document.body.classList.remove(aside.stop)
   asideWrap.classList.remove(aside.aside_actve)
   deemed.classList.remove(aside.on)
+  let i 
+  for(i=0; i < listItem.length; i++){
+    listItem[i].style.maxHeight = null;
+  }
+  let j
+  for(j=0; j < listItem.length; j++){
+    listTitle[j].classList.remove(aside.checked)
+  }
+  
 }
 
   return (
@@ -90,7 +102,7 @@ const handleClose = (e) =>{
               <li>
                 <div className={aside.list_title}>
                   <div><button>쇼핑</button><span>shopping</span></div>
-                  <span className={aside.list_title_icon}></span>
+                  <span className={aside.list_title_icon} ></span>
                 </div>
                 <ul className={aside.list_item}>
                   <li><Link to='/'>전체보기</Link></li>

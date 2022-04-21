@@ -12,19 +12,49 @@
 /*** visual ***/
 .main_visual {
   height: 680px;
+  overflow: hidden;
 }
 .main_visual .slide_item {
   display: flex;
   align-items: center;
+  position: relative;
+  
+}
+.main_visual .slide_item .bg{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
+
+  animation: visual-ani 20s infinite;
 }
+
+@keyframes visual-ani{
+  0% {
+   transform: scale(1.1);
+  }
+  50%{
+    transform: scale(1.0);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
 .main_visual .slide_item01 {
   background-image: url(../../../../public/assets/images/main-visual-01.png);
 }
+
 .main_visual .slide_item02 {
   background-image: url(../../../../public/assets/images/main-visual-02.png);
+}
+.main_visual .slide_item .text{
+  position: relative;
+  z-index: 2;
 }
 .main_visual .slide_item .text > p {
   font-family: 'GmarketSans';
@@ -91,10 +121,10 @@
 }
 @media screen and (max-width: 420px) { 
 .main_visual .slide_item01 {
-  background-position: -460px 0;
+  background-position: -460px 0 !important;
 }
 .main_visual .slide_item02 {
-  background-position: -570px 0;
+  background-position: -570px 0 !important;
   background-repeat: no-repeat;
 }
 .main_visual .slide_item02 .text{
@@ -119,7 +149,7 @@
 }
 @media screen and (max-width: 360px) { 
   .main_visual .slide_item01 {
-    background-position: -480px 0;
+    background-position: -480px 0 !important;
   }
 }
 
@@ -131,11 +161,13 @@
 }
 .main_section .section_title {
   margin-bottom: 50px;
+  
 }
 .main_section .section_title p {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 10px;
+  font-family: "GmarketSansBold";
 }
 .main_section .section_title span {
   display: block;

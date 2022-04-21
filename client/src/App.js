@@ -2,7 +2,6 @@ import React from "react";
 import { HelmetProvider } from "react-helmet-async";
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import ScrollToTop from "./components/common/ScrollToTop";
-import CartPage from "./pages/CartPage";
 import ItemDetailPage from "./pages/ItemDetailPage";
 import ItemListPage from "./pages/ItemListPage";
 import LoginPage from "./pages/LoginPage";
@@ -25,7 +24,6 @@ function App() {
             <Route element={<ItemDetailPage />} path="/ItemDetail/:id"/>
             <Route element={<LoginPage />} path="/Login"/>
             <Route element={<RegisterPage />} path="/Register"/>
-            <Route element={<CartPage />} path="/Cart"/>
           </Routes>
         </HelmetProvider>
       </BrowserRouter>
