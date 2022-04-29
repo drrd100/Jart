@@ -1,9 +1,6 @@
 import React,{useEffect, useState} from 'react'
 import css from '../../assets/css/main/main.module.css'
 
-// import cica_img from '../../assets/images/cica-bg-item.png'
-// import logo from '../../assets/images/logo_white.png';
-
 export default function MainCica() {
   const [position, setPosition] = useState(0);
   const windowWidth = window.innerWidth;
@@ -13,7 +10,6 @@ export default function MainCica() {
   }
   useEffect(() => {
     window.addEventListener("scroll", onScroll);
-   
     return () => {
       window.removeEventListener("scroll", onScroll);
     }
