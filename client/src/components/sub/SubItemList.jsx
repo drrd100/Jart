@@ -8,7 +8,7 @@ import LocationItemList from './LocationItemList';
 
 export default function SubItemList() {
   const { category } = useParams();
-  
+
   return (
     <>
         <div className={sub.list_page}>

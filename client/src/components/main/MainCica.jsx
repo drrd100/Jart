@@ -1,4 +1,5 @@
 import React,{useEffect, useState} from 'react'
+import { Link } from 'react-router-dom';
 import css from '../../assets/css/main/main.module.css'
 
 export default function MainCica() {
@@ -30,7 +31,7 @@ export default function MainCica() {
               더마톨로지 케어로<br/>
               민감해진 피부를 긴급 케어하세요
             </p>
-            <button>cicapair more</button>
+            <Link to="/ItemDetail/4">cicapair more</Link>
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ import axios from "axios";
 import { Pagination } from "swiper";
 import css from '../../assets/css/main/main.module.css';
 import { Link } from 'react-router-dom';
+import { priceComma } from '../Hook/PriceComma';
 
 
 export default function MainNewSlide() {
@@ -57,8 +58,8 @@ export default function MainNewSlide() {
                 <p className={css.desc}>{item.desc}</p>
                 <p className={css.name}>{item.name}</p>
                 <div className={css.price}>
-                    <span className={css.normal_price}>{item.price}원</span>
-                    <span className={css.sale_price}>{item.sale_price}원</span>
+                    <span className={css.normal_price}>{priceComma(item.price)}원</span>
+                    <span className={css.sale_price}>{priceComma(item.sale_price)}원</span>
                 </div>
             </div>
           </Link>

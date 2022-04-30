@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import sub from '../../assets/css/sub/sub.module.css'
+import { priceComma } from './PriceComma';
+
 
 export default function AllItem() {
   const [item, setItem] = useState([]);
@@ -26,8 +28,8 @@ export default function AllItem() {
             <p className={sub.desc}>{item.desc}</p>
             <p className={sub.name}>{item.name}</p>
             <div className={sub.price}>
-                <span className={sub.normal_price}>{item.price}원</span>
-                <span className={sub.sale_price}>{item.sale_price}원</span>
+                <span className={sub.normal_price}>{priceComma(item.price)}원</span>
+                <span className={sub.sale_price}>{priceComma(item.sale_price)}원</span>
             </div>
         </div>
       </Link>

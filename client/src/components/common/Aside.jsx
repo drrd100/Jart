@@ -1,5 +1,5 @@
 import React, { useEffect} from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import aside from '../../assets/css/common/aside.module.css'
 
 import useLoginCheck from '../Hook/useLoginCheck';
@@ -8,6 +8,7 @@ export default function Aside() {
   const isLogin = useLoginCheck()
   const loginChk = isLogin.isLogin
   const userId = sessionStorage.getItem("user_id");
+  const params = useParams()
 
   const handleLogout = () => {
       sessionStorage.removeItem('user_id')
@@ -56,6 +57,11 @@ const handleClose = (e) =>{
   }
   
 }
+useEffect((e) => {
+  handleClose();
+  console.log("동작")
+
+  },[params])
 
   return (
     <>
@@ -77,7 +83,7 @@ const handleClose = (e) =>{
                 </div>
                 <div className={aside.user_btn}>
                   <Link to="/"><img src="/assets/images/like.png" alt="" /><span>찜</span></Link>
-                  <Link to="/Cart"><img src="/assets/images/cart.png" alt="" /><span>장바구니</span></Link>
+                  <Link to="/"><img src="/assets/images/cart.png" alt="" /><span>장바구니</span></Link>
                   <Link to="/"><img src="/assets/images/profile.png" alt="" /><span>마이페이지</span></Link>
                 </div>
               </>
@@ -92,7 +98,7 @@ const handleClose = (e) =>{
               </div>
               <div className={aside.user_btn}>
                 <Link to="/"><img src="/assets/images/like.png" alt="" /><span>찜</span></Link>
-                <Link to="/Cart"><img src="/assets/images/cart.png" alt="" /><span>장바구니</span></Link>
+                <Link to="/"><img src="/assets/images/cart.png" alt="" /><span>장바구니</span></Link>
                 <Link to="/"><img src="/assets/images/profile.png" alt="" /><span>마이페이지</span></Link>
               </div>
             </>
@@ -105,9 +111,9 @@ const handleClose = (e) =>{
                   <span className={aside.list_title_icon} ></span>
                 </div>
                 <ul className={aside.list_item}>
-                  <li><Link to='/'>전체보기</Link></li>
-                  <li><Link to='/'>베스트</Link></li>
-                  <li><Link to='/'>신상품</Link></li>
+                  <li><Link to='/Itemlist/all'>전체보기</Link></li>
+                  <li><Link to='/Itemlist/best'>베스트</Link></li>
+                  <li><Link to='/Itemlist/new'>신상품</Link></li>
                   <li><Link to='/'>라인별</Link></li>
                 </ul>
               </li>

@@ -7,14 +7,11 @@ import Header from '../components/common/Header';
 import DetailTab from '../components/sub/DetailTab';
 import SEO from '../SEO';
 
-
-
 export default function ItemDetailPage() {
   const [number, setNumber] = useState(1);
   const [totalPrice, setTotalPrice] = useState();
   const [item, setItem] = useState([]);
   const {id} = useParams();
-  
 
   useEffect(() => {
     const callApi = async () => {
@@ -38,6 +35,11 @@ export default function ItemDetailPage() {
     }
   }
 
+  let TotalFormat = new Intl.NumberFormat().format(totalPrice)
+  let PriceFormat = new Intl.NumberFormat().format(item.sale_price)
+
+
+
   return (
     <>
     <SEO
@@ -57,7 +59,7 @@ export default function ItemDetailPage() {
           <div className={detail.info_area}>
             <div className={detail.info}>
               <p className={detail.name}>{item.name}</p>  
-              <p className={detail.price}>{item.sale_price}원</p>
+              <p className={detail.price}>{PriceFormat}원</p>
               <p className={detail.deilvery}>배송비 4,000원</p>
             </div>
             <div className={detail.product_select}>
@@ -69,11 +71,11 @@ export default function ItemDetailPage() {
                   <button onClick={decrease}></button>
                 </div>
               </div>
-              <p>{totalPrice}원</p>
+              <p>{TotalFormat}원</p>
             </div>
             <div className={detail.total}>
               <span>TOTAL</span>
-              <span>{totalPrice}원</span>  
+              <span>{TotalFormat}원</span>  
             </div>
             <div className={detail.order_btn_list}>
                 <button className={detail.action}>바로 구매하기</button>

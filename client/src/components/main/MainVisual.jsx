@@ -17,7 +17,7 @@ export default function MainVisual() {
       autoplay={{
         delay: 5000,
       }}
-      modules={[EffectFade,Autoplay]}
+      modules={[EffectFade, Autoplay]}
     >
         <SwiperSlide className={[main.slide_item,main.slide_item01].join(' ')}>
           <div className={main.inner}>
