@@ -10,4 +10,6 @@ const db = mysql.createConnection({
     database: process.env.DB_DATABASE,
 });
 
+
+
 module.exports = db;
