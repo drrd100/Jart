@@ -29,8 +29,6 @@ export default function Register() {
       alert("비밀번호가 일치하지 않습니다.")
     }
     try {
-      console.log(id,password,confPassword);
-      console.log("버튼클릭");
       await axios.post('/users/register',null, {
         params: {
           'id': id,
