@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../config/db');
-const util = require('util');
+// const util = require('util');
 
 router.post('/login', (req, res) => {
 db((conn) => {
@@ -70,25 +70,5 @@ router.post('/register', (req, res) => {
         conn.release();
     });
 });
-
-// function handleDisconnect() {
-//     db.connect(function(err) {              
-//       if(err) {                                     
-//         console.log('error when connecting to db:', err);
-//         setTimeout(handleDisconnect, 2000); 
-//       }                                     
-//     });                                     
-                                            
-//     db.on('error', function(err) {
-//       console.log('db error', err);
-//       if(err.code === 'PROTOCOL_CONNECTION_LOST') { 
-//         handleDisconnect();                         
-//       } else {                                      
-//         throw err;                                  
-//       }
-//     });
-//   }
-  
-//   handleDisconnect();
 
 module.exports = router;
