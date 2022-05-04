@@ -3,7 +3,7 @@
 1. 디자인 
 - 쇼핑몰 특성에 맞게 메인에 다양한 상품을 노출시켜 디자인 했습니다.
 
-2. 언어 및 구현 JavaScript,React,NODE,AWS,HTML,CSS,
+2. 언어 및 구현 JavaScript,React,Node,AWS,HTML,CSS,
 - 반응형 퍼블리싱
 - AWS EC 배포
 - AWS RDS 사용
@@ -21,3 +21,6 @@
 
 
 <img src="/read-img/img1.jpg">
+<img src="/read-img/img2.jpg">
+<img src="/read-img/img3.jpg">
+<img src="/read-img/img4.jpg">
