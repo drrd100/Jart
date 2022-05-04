@@ -59,8 +59,6 @@ const handleClose = (e) =>{
 }
 useEffect((e) => {
   handleClose();
-  console.log("동작")
-
   },[params])
 
   return (

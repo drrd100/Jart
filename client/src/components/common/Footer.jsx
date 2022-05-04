@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 import footer from '../../assets/css/common/footer.module.css';
-
+import Aside from '../common/Aside';
 // import logo from '../../assets/images/top-logo.png';
 // import icon_kakao from '../../assets/images/icon-kakao.png';
 // import icon_twitter from '../../assets/images/icon-twitter.png';
@@ -46,6 +46,7 @@ export default function Footer() {
         </div>
       </div>
     </div> 
+    <Aside />
     </>
   )
 }

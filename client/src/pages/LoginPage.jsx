@@ -12,15 +12,12 @@ export default function LoginPage(props) {
 
   const handleId = (e) =>{
     setId(e.target.value)
-    // console.log(e.target.value)
   }
   const handlePsword = (e) =>{
     setPsword(e.target.value)
-    // console.log(e.target.value)
   }
 
   const handleSubmit = async (e) =>{
-    console.log('클릭');
     e.preventDefault()
     axios.post('/users/login', null, {
       params: {
@@ -29,20 +26,11 @@ export default function LoginPage(props) {
       }
   })
   .then(res => {
-    console.log(res)
-    console.log('res.data.id :: ', res.data.id)
-    console.log('res.data.msg :: ', res.data.msg)
     if(res.data.id === undefined){
-        // id 일치하지 않는 경우 id = undefined, msg = '입력하신 id 가 일치하지 않습니다.'
-        console.log('======================',res.data.msg)
         alert('입력하신 아이디가 없습니다.')
     } else if(res.data.id === null){
-        // id는 있지만, pw 는 다른 경우 id = null , msg = undefined
-        console.log('======================','입력하신 비밀번호 가 일치하지 않습니다.')
         alert('입력하신 비밀번호가 일치하지 않습니다.')
     } else if(res.data.id === id) {
-        // id, pw 모두 일치 id = id1, msg = undefined
-        console.log('======================','로그인 성공')
         sessionStorage.setItem('user_id', id)
         navagate('/');
     }

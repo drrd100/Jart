@@ -14,6 +14,9 @@ const db = (callback) => {
         if(!err){
             console.log("모듈 연결성공")
             callback(conn)
+        }else{
+            console.log("모듈 연결실패")
+            console.log(err);
         }
     });
 }

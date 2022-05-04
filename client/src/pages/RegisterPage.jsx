@@ -12,7 +12,6 @@ export default function Register() {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [confPassword, setConfPassword] = useState('');
-  const [msg, setMsg] = useState('');
   const navigate = useNavigate();
 
   const Register = async (e) => {
@@ -37,8 +36,9 @@ export default function Register() {
           }
       })
         .then(res =>{
-          console.log(res.data.success);
-          console.log(res.data.err);
+          if(res.data.err){
+            alert("동일한 아이디가 있습니다.")
+          }
           if(res.data.success === true){
             alert("회원가입이 완료되었습니다.")
             navigate("/Login");
@@ -46,7 +46,7 @@ export default function Register() {
         })
     } catch (err) {
         if (err.res) {
-            setMsg(err.res.data.msg);
+            alert(err.res.data.msg);
         }
     }
     
@@ -65,7 +65,7 @@ export default function Register() {
         <div className={register.register_contents}>
           <div className={register.register_contents_inner}>
             <div className={register.register_title}>
-              <p>회원가입 {msg}</p>
+              <p>회원가입</p>
             </div>
             <form className={register.register_form} onSubmit={Register}>
               <TextField id="standard-basic" label="아이디" variant="standard" className={register.register_input} onChange={(e) => setId(e.target.value)}/>

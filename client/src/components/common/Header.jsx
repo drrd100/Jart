@@ -3,7 +3,7 @@ import HeaderNav from './HeaderNav';
 import HeaderTop from './HeaderTop';
 
 import header from '../../assets/css/common/header.module.css';
-import Aside from './Aside';
+
 
 
 export default function Header() {
@@ -38,7 +38,7 @@ export default function Header() {
           
         </div>
       </div>
-      <Aside />
+      
     </>
   )
 }
