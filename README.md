@@ -5,10 +5,12 @@
 
 2. 언어 및 구현 JavaScript,React,Node,AWS,HTML,CSS,
 - 반응형 퍼블리싱
+- React로 front 구현
+- express server 구현
 - AWS EC 배포
 - AWS RDS 사용
 - aixos 데이터 통신
-- 로그인기능 구현
+- 로그인 구현
 - 회원가입 구현
 - 아이템리스트 pagination 구현
 - React-Helmet 으로 동적인 meta 태그 구현
@@ -18,7 +20,8 @@
 - [LINK 이동시 위치 이슈](https://92yeol.tistory.com/42?category=918540)
 - [Aside LINK 이동시 scrollStop 이슈](https://92yeol.tistory.com/44?category=918540)
 - [CRA React17,React18 렌더링 이슈](https://92yeol.tistory.com/31?category=926941)
-
+- [AWS RDS MYAQL 커넥트 이슈](https://92yeol.tistory.com/5?category=918545)
+- [CORS 이슈](https://92yeol.tistory.com/12?category=918540)
 
 <img src="/read-img/img1.jpg">
 <img src="/read-img/img2.jpg">
