@@ -9,7 +9,7 @@ import { priceComma } from '../Hook/PriceComma';
 export default function AllItem() {
   const [item, setItem] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(8);
+  const [itemsPerPage] = useState(8);
 
   useEffect(() => {
     const callApi = async () => {
