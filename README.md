@@ -20,7 +20,7 @@
 - [LINK 이동시 위치 이슈](https://92yeol.tistory.com/42?category=918540)
 - [Aside LINK 이동시 scrollStop 이슈](https://92yeol.tistory.com/44?category=918540)
 - [CRA React17,React18 렌더링 이슈](https://92yeol.tistory.com/31?category=926941)
-- [AWS RDS MYAQL 커넥트 이슈](https://92yeol.tistory.com/5?category=918545)
+- [AWS RDS Mysql 커넥트 이슈](https://92yeol.tistory.com/5?category=918545)
 - [CORS 이슈](https://92yeol.tistory.com/12?category=918540)
 
 <img src="/read-img/img1.jpg">
